@@ -1,10 +1,5 @@
 module Vehicularity
 
-  def initialize
-    @speed = 0
-    @direction = 'north'
-  end
-
   def brake
     @speed = 0
   end
@@ -19,7 +14,17 @@ module Vehicularity
 
 end
 
-class Car
+class Vehicle
+  
+  def initialize
+    @speed = 0
+    @direction = 'north'
+  end
+
+end
+
+
+class Car < Vehicle
 
   include Vehicularity
 
@@ -29,7 +34,7 @@ class Car
 
 end
 
-class Bike
+class Bike < Vehicle
 
   include Vehicularity
 
@@ -39,3 +44,11 @@ class Bike
 
 end
 
+car_1 = Car.new
+bike_1 = Bike.new
+
+p car_1
+p bike_1
+car_1.accelerate
+car_1.turn("West")
+p car_1
