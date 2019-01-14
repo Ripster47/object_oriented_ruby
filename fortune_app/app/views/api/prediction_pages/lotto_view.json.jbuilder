@@ -1,1 +1,0 @@
-json.formatted_numbers @formatted_numbers

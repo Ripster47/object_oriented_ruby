@@ -1,3 +1,0 @@
-json.fortune @fortune
-
-
